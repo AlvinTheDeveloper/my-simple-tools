@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/my-simple-tools/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/my-simple-tools/static/js/main.e4309466.chunk.js",
+    "main.js.map": "/my-simple-tools/static/js/main.e4309466.chunk.js.map",
+    "runtime-main.js": "/my-simple-tools/static/js/runtime-main.380f0cfd.js",
+    "runtime-main.js.map": "/my-simple-tools/static/js/runtime-main.380f0cfd.js.map",
+    "static/js/2.c236bc6f.chunk.js": "/my-simple-tools/static/js/2.c236bc6f.chunk.js",
+    "static/js/2.c236bc6f.chunk.js.map": "/my-simple-tools/static/js/2.c236bc6f.chunk.js.map",
+    "static/js/3.b973d98a.chunk.js": "/my-simple-tools/static/js/3.b973d98a.chunk.js",
+    "static/js/3.b973d98a.chunk.js.map": "/my-simple-tools/static/js/3.b973d98a.chunk.js.map",
+    "index.html": "/my-simple-tools/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/my-simple-tools/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.c236bc6f.chunk.js.LICENSE.txt": "/my-simple-tools/static/js/2.c236bc6f.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/my-simple-tools/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.380f0cfd.js",
+    "static/js/2.c236bc6f.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.e4309466.chunk.js"
+  ]
+}

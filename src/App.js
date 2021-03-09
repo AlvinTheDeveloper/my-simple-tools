@@ -14,6 +14,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -21,8 +22,9 @@ import {
     // Link
 } from "react-router-dom";
 
-import WelcomePage from "./WelcomePage"
-import SnipcartButtonGenerator from "./tool/SnipcartButtonGenerator";
+import LoadingComponent from './Loading'
+const WelcomePage = React.lazy(()=>import('./WelcomePage'))
+const SnipcartButtonGenerator = React.lazy(()=>import('./tool/SnipcartButtonGenerator'))
 
 const drawerWidth = 240;
 
@@ -56,7 +58,8 @@ const useStyles = makeStyles((theme) => ({
     content: {
         flexGrow: 1,
         padding: theme.spacing(3),
-        textAlign: 'center'
+        textAlign: 'center',
+        maxWidth:'1200px'
     },
 }));
 
@@ -90,67 +93,68 @@ function App(props) {
     return (
         <div className={classes.root}>
             <Router>
-                <CssBaseline/>
-                <AppBar position="fixed" className={classes.appBar}>
-                    <Toolbar>
-                        <IconButton
-                            color="inherit"
-                            aria-label="open drawer"
-                            edge="start"
-                            onClick={handleDrawerToggle}
-                            className={classes.menuButton}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                        <Typography variant="h6" noWrap>
-                            Responsive drawer
-                        </Typography>
-                    </Toolbar>
-                </AppBar>
+                <React.Suspense fallback={LoadingComponent()}>
+                    <CssBaseline/>
+                    <AppBar position="fixed" className={classes.appBar}>
+                        <Toolbar>
+                            <IconButton
+                                color="inherit"
+                                aria-label="open drawer"
+                                edge="start"
+                                onClick={handleDrawerToggle}
+                                className={classes.menuButton}
+                            >
+                                <MenuIcon />
+                            </IconButton>
+                            <Typography variant="h6" noWrap>
+                                Responsive drawer
+                            </Typography>
+                        </Toolbar>
+                    </AppBar>
 
-                <nav className={classes.drawer} aria-label="mailbox folders">
-                    {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
-                    <Hidden smUp implementation="css">
-                        <Drawer
-                            container={container}
-                            variant="temporary"
-                            anchor={theme.direction === 'rtl' ? 'right' : 'left'}
-                            open={mobileOpen}
-                            onClose={handleDrawerToggle}
-                            classes={{
-                                paper: classes.drawerPaper,
-                            }}
-                            ModalProps={{
-                                keepMounted: true, // Better open performance on mobile.
-                            }}
-                        >
-                            {drawer}
-                        </Drawer>
-                    </Hidden>
-                    <Hidden xsDown implementation="css">
-                        <Drawer
-                            classes={{
-                                paper: classes.drawerPaper,
-                            }}
-                            variant="permanent"
-                            open
-                        >
-                            {drawer}
-                        </Drawer>
-                    </Hidden>
-                </nav>
-                <main className={classes.content}>
-                    <div className={classes.toolbar}/>
-                    <Switch>
-
-                        <Route path="/snipcart-button-generator">
-                            <SnipcartButtonGenerator/>
-                        </Route>
-                        <Route path="/">
-                            <WelcomePage/>
-                        </Route>
-                    </Switch>
-                </main>
+                    <nav className={classes.drawer} aria-label="mailbox folders">
+                        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+                        <Hidden smUp implementation="css">
+                            <Drawer
+                                container={container}
+                                variant="temporary"
+                                anchor={theme.direction === 'rtl' ? 'right' : 'left'}
+                                open={mobileOpen}
+                                onClose={handleDrawerToggle}
+                                classes={{
+                                    paper: classes.drawerPaper,
+                                }}
+                                ModalProps={{
+                                    keepMounted: true, // Better open performance on mobile.
+                                }}
+                            >
+                                {drawer}
+                            </Drawer>
+                        </Hidden>
+                        <Hidden xsDown implementation="css">
+                            <Drawer
+                                classes={{
+                                    paper: classes.drawerPaper,
+                                }}
+                                variant="permanent"
+                                open
+                            >
+                                {drawer}
+                            </Drawer>
+                        </Hidden>
+                    </nav>
+                    <main className={classes.content}>
+                        <div className={classes.toolbar}/>
+                        <Switch>
+                            <Route path="/snipcart-button-generator">
+                                <SnipcartButtonGenerator/>
+                            </Route>
+                            <Route path="/">
+                                <WelcomePage/>
+                            </Route>
+                        </Switch>
+                    </main>
+                </React.Suspense>
             </Router>
         </div>
     );

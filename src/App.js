@@ -97,7 +97,7 @@ function App(props) {
 
     return (
         <div className={classes.root}>
-            <Router>
+            <Router basename='/'>
                 <React.Suspense fallback={LoadingComponent()}>
                     <CssBaseline/>
                     <AppBar position="fixed" className={classes.appBar}>
@@ -160,7 +160,7 @@ function App(props) {
                             {/*<Route path="/snipcart-button-generator">*/}
                             {/*    <SnipcartButtonGenerator/>*/}
                             {/*</Route>*/}
-                            <Route path="/">
+                            <Route exact path="/">
                                 <WelcomePage/>
                             </Route>
                         </Switch>

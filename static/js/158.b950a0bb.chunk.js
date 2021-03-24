@@ -1,0 +1,2 @@
+(this["webpackJsonpmy-simple-tools"]=this["webpackJsonpmy-simple-tools"]||[]).push([[158],{395:function(e,t,s){"use strict";s.r(t),s.d(t,"default",(function(){return o}));s(0);var i=s(5);function o(){return Object(i.jsxs)("div",{children:[Object(i.jsx)("p",{children:Object(i.jsx)("h1",{children:"Welcome to MySimpleTools"})}),Object(i.jsx)("p",{children:Object(i.jsx)("h2",{children:"Feel free to use the tools provided on this site."})})]})}}}]);
+//# sourceMappingURL=158.b950a0bb.chunk.js.map

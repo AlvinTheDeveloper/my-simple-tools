@@ -25,6 +25,8 @@ import {
 import LoadingComponent from './Loading'
 const WelcomePage = React.lazy(()=>import('./WelcomePage'))
 const SnipcartButtonGenerator = React.lazy(()=>import('./tool/SnipcartButtonGenerator'))
+const JsRedirectCodeGenerator = React.lazy(()=>import('./tool/JsRedirectCodeGenerator'))
+const BootstrapLoadingIconGenerator = React.lazy(()=>import('./tool/BootstrapLoadingIconGenerator'))
 
 const drawerWidth = 240;
 
@@ -78,7 +80,10 @@ function App(props) {
             <List>
                 {[
                     {name: "Home", path: "/"},
-                    {name: "Snipcart Cart Button Generator", path: "/snipcart-button-generator"},].map((item, index) => (
+                    // {name: "Snipcart Cart Button Generator", path: "/snipcart-button-generator"},
+                    {name: "JS Redirect Code Generator", path: "/js-redirect-code-generator"},
+                    // {name: "Bootstrap Loading Icon Generator", path: "/bootstrap-loading-icon-generator"},
+                ].map((item, index) => (
                     <Link href={item.path}>
                         <ListItem button key={item.name}>
                             <ListItemText primary={item.name}/>
@@ -107,7 +112,7 @@ function App(props) {
                                 <MenuIcon />
                             </IconButton>
                             <Typography variant="h6" noWrap>
-                                Responsive drawer
+                                My Simple Tools
                             </Typography>
                         </Toolbar>
                     </AppBar>
@@ -146,9 +151,15 @@ function App(props) {
                     <main className={classes.content}>
                         <div className={classes.toolbar}/>
                         <Switch>
-                            <Route path="/snipcart-button-generator">
-                                <SnipcartButtonGenerator/>
+                            <Route path="/js-redirect-code-generator">
+                                <JsRedirectCodeGenerator/>
                             </Route>
+                            {/*<Route path="/bootstrap-loading-icon-generator">*/}
+                            {/*    <BootstrapLoadingIconGenerator/>*/}
+                            {/*</Route>*/}
+                            {/*<Route path="/snipcart-button-generator">*/}
+                            {/*    <SnipcartButtonGenerator/>*/}
+                            {/*</Route>*/}
                             <Route path="/">
                                 <WelcomePage/>
                             </Route>

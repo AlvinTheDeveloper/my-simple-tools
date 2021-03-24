@@ -4,7 +4,6 @@ import { CopyBlock, dracula } from "react-code-blocks";
 import TextField from '@material-ui/core/TextField';
 const prettify=require('html-prettify');
 
-
 const useStyles = createUseStyles({
     contentFloat:{
         float: 'left'

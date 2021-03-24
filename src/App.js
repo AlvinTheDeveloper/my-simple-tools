@@ -4,7 +4,7 @@ import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Link from '@material-ui/core/Link';
+// import Link from '@material-ui/core/Link';
 import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
@@ -16,10 +16,10 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Switch,
     Route,
-    // Link
+    Link
 } from "react-router-dom";
 
 import LoadingComponent from './Loading'
@@ -84,7 +84,7 @@ function App(props) {
                     {name: "JS Redirect Code Generator", path: "/js-redirect-code-generator"},
                     // {name: "Bootstrap Loading Icon Generator", path: "/bootstrap-loading-icon-generator"},
                 ].map((item, index) => (
-                    <Link href={item.path}>
+                    <Link to={item.path}>
                         <ListItem button key={item.name}>
                             <ListItemText primary={item.name}/>
                         </ListItem>
@@ -151,18 +151,14 @@ function App(props) {
                     <main className={classes.content}>
                         <div className={classes.toolbar}/>
                         <Switch>
-                            <Route path="/js-redirect-code-generator">
-                                <JsRedirectCodeGenerator/>
-                            </Route>
+                            <Route path="/js-redirect-code-generator" component={JsRedirectCodeGenerator}/>
                             {/*<Route path="/bootstrap-loading-icon-generator">*/}
                             {/*    <BootstrapLoadingIconGenerator/>*/}
                             {/*</Route>*/}
                             {/*<Route path="/snipcart-button-generator">*/}
                             {/*    <SnipcartButtonGenerator/>*/}
                             {/*</Route>*/}
-                            <Route exact path="/">
-                                <WelcomePage/>
-                            </Route>
+                            <Route exact path="/" component={WelcomePage}/>
                         </Switch>
                     </main>
                 </React.Suspense>

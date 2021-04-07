@@ -3,8 +3,8 @@
     "static/js/0.9ff0df60.chunk.js": "/my-simple-tools/static/js/0.9ff0df60.chunk.js",
     "static/js/0.9ff0df60.chunk.js.map": "/my-simple-tools/static/js/0.9ff0df60.chunk.js.map",
     "main.css": "/my-simple-tools/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/my-simple-tools/static/js/main.1373b5bd.chunk.js",
-    "main.js.map": "/my-simple-tools/static/js/main.1373b5bd.chunk.js.map",
+    "main.js": "/my-simple-tools/static/js/main.2c6845ba.chunk.js",
+    "main.js.map": "/my-simple-tools/static/js/main.2c6845ba.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.js": "/my-simple-tools/static/js/react-syntax-highlighter_languages_refractor_abap.3e4f8538.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js.map": "/my-simple-tools/static/js/react-syntax-highlighter_languages_refractor_abap.3e4f8538.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_actionscript.js": "/my-simple-tools/static/js/react-syntax-highlighter_languages_refractor_actionscript.553649f9.chunk.js",
@@ -335,6 +335,6 @@
     "static/js/runtime-main.438d5620.js",
     "static/js/155.6247c4a2.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.1373b5bd.chunk.js"
+    "static/js/main.2c6845ba.chunk.js"
   ]
 }

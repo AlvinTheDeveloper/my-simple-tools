@@ -63,6 +63,10 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         maxWidth:'1200px'
     },
+    linkText:{
+        color: "#5b4a4a",
+        "text-decoration": 'none'
+    }
 }));
 
 function App(props) {
@@ -84,7 +88,7 @@ function App(props) {
                     {name: "JS Redirect Code Generator", path: "/js-redirect-code-generator"},
                     // {name: "Bootstrap Loading Icon Generator", path: "/bootstrap-loading-icon-generator"},
                 ].map((item, index) => (
-                    <Link to={item.path}>
+                    <Link className={classes.linkText} to={item.path}>
                         <ListItem button key={item.name}>
                             <ListItemText primary={item.name}/>
                         </ListItem>
@@ -155,9 +159,9 @@ function App(props) {
                             {/*<Route path="/bootstrap-loading-icon-generator">*/}
                             {/*    <BootstrapLoadingIconGenerator/>*/}
                             {/*</Route>*/}
-                            {/*<Route path="/snipcart-button-generator">*/}
-                            {/*    <SnipcartButtonGenerator/>*/}
-                            {/*</Route>*/}
+                            <Route path="/snipcart-button-generator">
+                                <SnipcartButtonGenerator/>
+                            </Route>
                             <Route exact path="/" component={WelcomePage}/>
                         </Switch>
                     </main>

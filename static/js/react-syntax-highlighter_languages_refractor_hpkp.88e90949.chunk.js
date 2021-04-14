@@ -1,0 +1,2 @@
+(this["webpackJsonpmy-simple-tools"]=this["webpackJsonpmy-simple-tools"]||[]).push([[56],{457:function(a,s,e){"use strict";function t(a){a.languages.hpkp={directive:{pattern:/\b(?:(?:includeSubDomains|preload|strict)(?: |;)|pin-sha256="[a-zA-Z\d+=/]+"|(?:max-age|report-uri)=|report-to )/,alias:"keyword"},safe:{pattern:/\d{7,}/,alias:"selector"},unsafe:{pattern:/\d{1,6}/,alias:"function"}}}a.exports=t,t.displayName="hpkp",t.aliases=[]}}]);
+//# sourceMappingURL=react-syntax-highlighter_languages_refractor_hpkp.88e90949.chunk.js.map

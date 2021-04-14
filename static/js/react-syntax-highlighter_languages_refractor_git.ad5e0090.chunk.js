@@ -1,0 +1,2 @@
+(this["webpackJsonpmy-simple-tools"]=this["webpackJsonpmy-simple-tools"]||[]).push([[47],{448:function(m,s,t){"use strict";function e(m){m.languages.git={comment:/^#.*/m,deleted:/^[-\u2013].*/m,inserted:/^\+.*/m,string:/("|')(?:\\.|(?!\1)[^\\\r\n])*\1/m,command:{pattern:/^.*\$ git .*$/m,inside:{parameter:/\s--?\w+/m}},coord:/^@@.*@@$/m,commit_sha1:/^commit \w{40}$/m}}m.exports=e,e.displayName="git",e.aliases=[]}}]);
+//# sourceMappingURL=react-syntax-highlighter_languages_refractor_git.ad5e0090.chunk.js.map
